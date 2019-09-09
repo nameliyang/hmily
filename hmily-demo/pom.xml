@@ -14,7 +14,6 @@
         <version>2.1.1.RELEASE</version>
     </parent>
     <modules>
-        <module>hmily-demo-dubbo</module>
         <module>hmily-demo-springcloud</module>
     </modules>
 
