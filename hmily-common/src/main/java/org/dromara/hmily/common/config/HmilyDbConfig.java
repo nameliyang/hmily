@@ -36,7 +36,7 @@ public class HmilyDbConfig {
     /**
      * driverClassName.
      */
-    private String driverClassName = "com.mysql.jdbc.Driver";
+    private String driverClassName = "com.mysql.cj.jdbc.Driver";
 
     /**
      * url.

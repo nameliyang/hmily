@@ -23,6 +23,7 @@ import org.dromara.hmily.demo.springcloud.inventory.dto.InventoryDTO;
 import org.dromara.hmily.demo.springcloud.inventory.entity.InventoryDO;
 import org.dromara.hmily.demo.springcloud.inventory.mapper.InventoryMapper;
 import org.dromara.hmily.demo.springcloud.inventory.service.InventoryService;
+import org.omg.SendingContext.RunTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,8 +60,9 @@ public class InventoryServiceImpl implements InventoryService {
     @Override
     @Hmily(confirmMethod = "confirmMethod", cancelMethod = "cancelMethod")
     public Boolean decrease(InventoryDTO inventoryDTO) {
-        LOGGER.info("==========springcloud调用扣减库存decrease===========");
+        LOGGER.info("==========before springcloud调用扣减库存decrease ===========");
         inventoryMapper.decrease(inventoryDTO);
+        LOGGER.info("==========after  springcloud调用扣减库存decrease===========");
         return true;
     }
 

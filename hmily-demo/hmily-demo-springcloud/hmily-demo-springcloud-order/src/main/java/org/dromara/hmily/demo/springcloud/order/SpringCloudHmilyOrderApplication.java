@@ -19,6 +19,7 @@ package org.dromara.hmily.demo.springcloud.order;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
@@ -31,11 +32,13 @@ import org.springframework.context.annotation.ImportResource;
  *
  * @author xiaoyu
  */
-@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+
+
 @EnableEurekaClient
 @EnableFeignClients
 @ImportResource({"classpath:applicationContext.xml"})
 @MapperScan("org.dromara.hmily.demo.springcloud.order.mapper")
+@EnableAutoConfiguration
 public class SpringCloudHmilyOrderApplication {
 
     /**

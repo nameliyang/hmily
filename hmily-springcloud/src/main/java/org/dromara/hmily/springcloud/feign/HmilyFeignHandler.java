@@ -53,7 +53,7 @@ public class HmilyFeignHandler implements InvocationHandler {
             try {
                 final HmilyTransactionContext hmilyTransactionContext = HmilyTransactionContextLocal.getInstance().get();
                 if (Objects.nonNull(hmilyTransactionContext)) {
-                    if (hmilyTransactionContext.getRole() == HmilyRoleEnum.LOCAL.getCode()) {
+                    if (hmilyTransactionContext.getRole() ==  HmilyRoleEnum.LOCAL.getCode()) {
                         hmilyTransactionContext.setRole(HmilyRoleEnum.INLINE.getCode());
                     }
                 }

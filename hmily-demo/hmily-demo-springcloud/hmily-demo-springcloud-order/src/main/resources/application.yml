@@ -9,8 +9,8 @@ spring:
     main:
         allow-bean-definition-overriding: true
     datasource:
-        driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.1.98:3306/tcc_order?useUnicode=true&characterEncoding=utf8
+        driver-class-name:  com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/tcc_order?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&&autoReconnect=true
         username: root
         password: 123456
     application:
@@ -34,7 +34,7 @@ hmilyOrder :
         MaxAutoRetriesNextServer : 0
 feign:
   hystrix:
-     enabled : true
+     enabled : false
     # 在feign中开启hystrix功能，默认情况下feign不开启hystrix功能
 
 logging:

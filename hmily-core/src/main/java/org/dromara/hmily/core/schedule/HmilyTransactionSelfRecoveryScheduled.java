@@ -136,7 +136,8 @@ public class HmilyTransactionSelfRecoveryScheduled implements ApplicationListene
                     } catch (Exception e) {
                         LOGGER.error("hmily scheduled transaction log is error:{}", e);
                     }
-                }, hmilyConfig.getScheduledInitDelay(), hmilyConfig.getScheduledDelay(), TimeUnit.SECONDS);
+                      }, 10, 10, TimeUnit.SECONDS);
+             //   }, hmilyConfig.getScheduledInitDelay(), hmilyConfig.getScheduledDelay(), TimeUnit.SECONDS);
 
     }
 
